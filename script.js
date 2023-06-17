@@ -191,6 +191,8 @@ function createFinal() {
             restart.onclick = refresh;
             final.appendChild(restart);
         }
+        const buttonNext = document.querySelector('#next');
+        buttonNext.style.display = "none";
 }
 
 //Altera as perguntas após apertar em Anterior ou Proxima.
@@ -239,6 +241,8 @@ function previous() {
         }
         if (j <= perguntas.length-1) {
             final.remove();
+            const buttonNext = document.querySelector('#next');
+            buttonNext.style.display = "inherit";
         }
     }
 }

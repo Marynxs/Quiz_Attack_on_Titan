@@ -183,7 +183,16 @@ function createFinal() {
             final.appendChild(h1);
         }
         else {
-            h1.innerText = `Parabéns você acertou ${total} questões`;
+            if (total == 0) {
+                h1.innerText = `Infelizmente você não acertou nenhuma questão, mais sorte na próxima vez :( `;
+            }
+            else if (total == 1) {
+                h1.innerText = `Parabéns você acertou ${total} questão`;
+            }
+            else {
+                h1.innerText = `Parabéns você acertou ${total} questões`;
+            }
+            h1.style.textAlign = "center";
             final.appendChild(h1);
             const restart = document.createElement("button");
             restart.setAttribute('id', 'restart');

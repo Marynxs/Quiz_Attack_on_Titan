@@ -271,11 +271,20 @@ function refresh() {
 }
 
 function appear() {
+    let image = document.querySelector("#img");
+    let dica = document.querySelector("#img h2");
     let photo = document.querySelector("#photo");
     photo.style.filter = "blur(0)";
+    dica.style.opacity = "0%";
+    image.style.cursor = "pointer"
+
 }
 
 function hide() {
+    let image = document.querySelector("#img");
     let photo = document.querySelector("#photo");
+    let dica = document.querySelector("#img h2");
     photo.style.filter = "blur(20px)";
+    dica.style.opacity = "100%";
+    image.style.cursor = "pointer"
 }

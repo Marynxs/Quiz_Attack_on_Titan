@@ -269,3 +269,13 @@ function wrong() {
 function refresh() {
     location.reload();
 }
+
+function appear() {
+    let photo = document.querySelector("#photo");
+    photo.style.filter = "blur(0)";
+}
+
+function hide() {
+    let photo = document.querySelector("#photo");
+    photo.style.filter = "blur(20px)";
+}
